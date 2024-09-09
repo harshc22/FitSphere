@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Fit Sphere</title>
+</head>
+<body>
+
+    <header>
+        <h1>Fit Sphere</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="workouts.html">Workouts</a> |
+            <a href="diet.html">Diet Plans</a> |
+            <a href="gym-locator.html">Gym Locator</a> |
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Contact Us</h2>
+            <p>If you have any questions, suggestions, or feedback, feel free to contact us using the form below. We’d love to hear from you!</p>
+
+            <form action="submit_form.php" method="POST">
+                <div>
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div>
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+                </div>
+
+                <div>
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Type your message here" required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Author: Harshpreet Chinjer | Last Modified: September 8th, 2024</p>
+    </footer>
+
+</body>
+</html>

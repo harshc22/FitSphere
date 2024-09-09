@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Locator | Fit Sphere</title>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 12
+            });
+            
+            var geocoder = new google.maps.Geocoder();
+            document.getElementById('submit').addEventListener('click', function () {
+                geocodeAddress(geocoder, map);
+            });
+        }
+
+        function geocodeAddress(geocoder, map) {
+            var address = document.getElementById('location').value;
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status === 'OK') {
+                    map.setCenter(results[0].geometry.location);
+                    new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location
+                    });
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Fit Sphere</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="bmr.html">BMR Calculator</a> |
+            <a href="workouts.html">Workouts</a> |
+            <a href="diet.html">Diet Plans</a> |
+            <a href="gym-locator.html">Gym Locator</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Find Nearby Gyms</h2>
+            <p>Enter your location to find gyms near you.</p>
+
+            <div>
+                <label for="location">Enter Location: </label>
+                <input type="text" id="location" placeholder="e.g. New York, NY">
+                <button id="submit">Find Gyms</button>
+            </div>
+
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Author: Harshpreet Chinjer | Last Modified: September 8th, 2024</p>
+        <p><a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <!-- Load the Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>
