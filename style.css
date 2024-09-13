@@ -1,0 +1,377 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background-color: #ec2d24;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem; /* CSS3 feature */
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem; /* CSS3 feature */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 14px 20px;
+    display: inline-block;
+    font-weight: bold;
+    background-color: #333;
+}
+
+nav ul li a:hover {
+    background-color: #ec2d24;
+}
+
+/* Main Content Styles */
+#content {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 900px;
+    background-color: white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* CSS3 feature */
+}
+
+#content h2 {
+    font-size: 2rem; /* CSS3 feature */
+    color: #ec2d24;
+}
+
+#content p, #content ul {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+#content ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+#content img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px; /* CSS3 feature */
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+
+    #content {
+        padding: 10px;
+    }
+    
+    #content img {
+        width: 100%;
+    }
+}
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #ec2d24;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Section */
+header {
+    background-color: #ec2d24;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+main, #content {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+h2 {
+    color: #ec2d24;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* Form Styles */
+label {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+input[type="number"], 
+select {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+input[type="radio"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+input[type="submit"] {
+    background-color: #ec2d24;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #ec2d24;
+}
+
+/* Result Section */
+#result span {
+    font-weight: bold;
+    color: #ec2d24;
+}
+
+#result {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Image Styles */
+main img, #content img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px; /* Rounded corners */
+    max-width: 100%; /* Responsive image */
+    height: auto;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer a {
+    color: #ec2d24;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Home Page Styles */
+#content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Div and Span Styles for Future Use */
+div {
+    padding: 10px;
+}
+
+span {
+    color: #333;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet and smaller devices */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main, #content {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    form input[type="submit"], button {
+        font-size: 1rem;
+    }
+
+    p, #result {
+        font-size: 1rem;
+    }
+}
+
+/* Phones and smaller screens */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+
+    main, #content {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    form label, form input, form select, button, form input[type="submit"] {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+iframe {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+/* Diet Plan Result Styles */
+#dietPlan {
+    margin-top: 20px;
+}
+
+#dietPlan table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#dietPlan th, #dietPlan td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#dietPlan th {
+    background-color: #f4f4f4;
+}
+
+#dietPlan span {
+    font-weight: bold;
+    color: #ec2d24;
+}
+
+button {
+    background-color: #ec2d24;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #c1272d;
+}
