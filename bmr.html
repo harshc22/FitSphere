@@ -5,53 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMR Calculator | Fit Sphere</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <script>
-        function calculateBMR() {
-            const gender = document.querySelector('input[name="gender"]:checked').value;
-            const age = parseFloat(document.getElementById("age").value);
-            const weight = parseFloat(document.getElementById("weight").value);
-            const height = parseFloat(document.getElementById("height").value);
-            const activity = document.getElementById("activity").value;
-
-            let bmr;
-
-            // BMR Calculation based on Harris-Benedict Equation
-            if (gender === "male") {
-                bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
-            } else {
-                bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
-            }
-
-            // Adjust BMR based on activity level
-            let activityFactor;
-            switch (activity) {
-                case "sedentary":
-                    activityFactor = 1.2;
-                    break;
-                case "light":
-                    activityFactor = 1.375;
-                    break;
-                case "moderate":
-                    activityFactor = 1.55;
-                    break;
-                case "active":
-                    activityFactor = 1.725;
-                    break;
-                case "extra_active":
-                    activityFactor = 1.9;
-                    break;
-            }
-
-            const totalCalories = bmr * activityFactor;
-
-            // Show result to the user
-            document.getElementById("result").innerHTML = `
-                Your BMR is <span>${bmr.toFixed(2)} calories/day</span>.
-                <br>
-                Based on your activity level, you need approximately <span>${totalCalories.toFixed(2)} calories/day</span>.
-            `;
-        }
-    </script>
+    <script src="JS/bmrCalculator.js" defer></script>
 </head>
 <body>
     <header>
@@ -59,7 +13,7 @@
     </header>
     <nav>
         <a href="index.html">Home</a> |
-        <a href="bmr.html" class="active"> BMR Calculator</a> |
+        <a href="bmr.html" class="active">BMR Calculator</a> |
         <a href="workouts.html">Workouts</a> |
         <a href="diet.html">Diet Plans</a> |
         <a href="gym-locator.html">Gym Locator</a>
@@ -111,7 +65,7 @@
     </main>
 
     <footer>
-        <p>Author: Harshpreet Chinjer | Last Modified: September 15th, 2024</p>
+        <p>Author: Harshpreet Chinjer | Last Modified: 2024</p>
         <p><a href="contact.html">Contact Us</a></p>
     </footer>
 </body>
