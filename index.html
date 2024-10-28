@@ -12,12 +12,15 @@
     <header>
         <h1>Welcome to Fit Sphere</h1>
         <p>Your ultimate fitness hub for a healthier you.</p>
-        <button class="toggle-mode js-toggle-mode"><i class="fa fa-moon-o fa-1.8x" aria-hidden="true"></i></buton>
-        <!-- font awesome library include 4.7 -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <button class="toggle-mode js-toggle-mode"><i class="fa fa-moon-o fa-1.8x" aria-hidden="true"></i></button>
+
+        <!-- font awesome library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <!-- font library -->
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     </header>
 
     <!-- Navigation Section -->
@@ -26,7 +29,7 @@
             <li><a href="bmr.html">BMR Calculator</a></li>
             <li><a href="workouts.html">Workouts</a></li>
             <li><a href="diet.html">Diet Plans</a></li>
-            <li><a href="gym-locator.html">Gym Locator</a></li>
+            <li><a href="gymLocator.html">Gym Locator</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
@@ -55,27 +58,8 @@
     <footer>
         <p>Author: Harshpreet Chinjer | Last Modified: September 15th, 2024</p>
     </footer>
-    <script>
-        const darkModeToggle = document.querySelector(".js-toggle-mode");
 
-        if(darkModeToggle != null) {
-            darkModeToggle.addEventListener("click", event => {
-                const icon = event.currentTarget.querySelector("i");
-                if (icon.classList.contains("darkmode-toggle")) {
-                    icon.classList.remove("darkmode-toggle");
-                    icon.classList.add("darkmode-toggle-normal");
-                    icon.classList.remove("fa-sun-o");
-                    icon.classList.add("fa-moon-o");
-                    document.documentElement.setAttribute("data-theme", "");
-                } else {
-                    icon.classList.remove("darkmode-toggle-normal");
-                    icon.classList.add("darkmode-toggle");
-                    icon.classList.remove("fa-moon-o");
-                    icon.classList.add("fa-sun-o");
-                    document.documentElement.setAttribute("data-theme", "dark-mode");
-                }
-            });
-        }
-    </script>
+    <!-- Link to External JavaScript -->
+    <script src="JS/nightMode.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@
         <a href="bmr.html">BMR Calculator</a> |
         <a href="workouts.html">Workouts</a> |
         <a href="diet.html">Diet Plans</a> |
-        <a href="gym-locator.html" class="active">Gym Locator</a>
+        <a href="gymLocator.html" class="active">Gym Locator</a>
     </nav>
     <main>
         <section>
@@ -28,13 +28,24 @@
                 <button id="submit">Find Gyms</button>
             </div>
 
-            <div id="map"></div>
+            <!-- Embed Map -->
+            <iframe
+                id="map"
+                width="100%"
+                height="500px"
+                style="border:0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </section>
     </main>
 
     <footer>
-        <p>Author: Harshpreet Chinjer | Last Modified: September 15th, 2024</p>
+        <p>Author: Harshpreet Chinjer | Last Modified: 2024</p>
         <p><a href="contact.html">Contact Us</a></p>
     </footer>
+
+    <script src="JS/gymLocator.js"></script>
 </body>
 </html>
