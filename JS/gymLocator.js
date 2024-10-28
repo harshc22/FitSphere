@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
         // Fetch the API key from config.json
-        const response = await fetch("./config.json");
+        const response = await fetch("./data/config.json");
         const config = await response.json();
         const apiKey = config.apiKey;
 
@@ -21,7 +21,7 @@ document.getElementById("submit").addEventListener("click", async () => {
     if (location) {
         try {
             // Fetch the API key from config.json
-            const response = await fetch("./config.json");
+            const response = await fetch("./data/config.json");
             const config = await response.json();
             const apiKey = config.apiKey;
 
