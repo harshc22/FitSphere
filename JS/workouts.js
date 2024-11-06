@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const videoContainer = document.getElementById("video-container");
     const muscleGroupSelect = document.getElementById("muscle-group");
+    const randomVideoButton = document.getElementById("random-video-button");
 
     // Fetch video data from the JSON file
     async function loadVideoData() {
@@ -41,9 +42,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Function to display a random video
+    async function displayRandomVideo() {
+        videoContainer.innerHTML = ""; // Clear existing content
+        const videos = await loadVideoData(); // Load data from JSON
+
+        // Flatten all videos from different muscle groups into one array
+        const allVideos = Object.values(videos).flat();
+
+        if (allVideos.length > 0) {
+            const randomIndex = Math.floor(Math.random() * allVideos.length);
+            const randomVideo = allVideos[randomIndex];
+            videoContainer.innerHTML = createVideoHTML(randomVideo);
+        } else {
+            videoContainer.innerHTML = "<p>No videos available at the moment.</p>";
+        }
+    }
+
     // Event listener for muscle group selection
     muscleGroupSelect.addEventListener("change", (event) => {
         const selectedMuscleGroup = event.target.value;
         displayVideos(selectedMuscleGroup);
     });
+
+    // Event listener for random video button
+    randomVideoButton.addEventListener("click", displayRandomVideo);
 });
