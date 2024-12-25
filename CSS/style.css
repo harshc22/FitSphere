@@ -465,3 +465,16 @@ button.toggle-mode i:before{
     transform: translateX(0%);
     }
 }
+
+
+/* Override Slick carousel arrows size and color */
+.slick-prev:before, .slick-next:before{
+    color: var(--primary-color) !important;
+    font-family: 'slick' !important;
+    font-size: 35px !important;
+}
+
+.slick-prev, .slick-next{
+    height: 70px !important;
+    width: 70px !important;
+}

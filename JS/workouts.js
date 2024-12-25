@@ -28,6 +28,35 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     }
 
+    // Function to initialize Slick Carousel
+    function initializeSlick() {
+        // Manually remove any slick initialization classes or styles
+        videoContainer.classList.remove('slick-initialized');
+        videoContainer.classList.remove('slick-slider');
+        videoContainer.classList.remove('slick-list');
+        videoContainer.classList.remove('slick-track');
+        
+        // Clear inline styles applied by Slick (just in case)
+        videoContainer.removeAttribute('style');
+
+        // Reinitialize the Slick carousel
+        $(videoContainer).slick({
+            infinite: true,               // Infinite loop
+            slidesToShow: 1,              // Show one slide at a time
+            slidesToScroll: 1,            // Scroll one slide at a time
+            arrows: true,
+            dots: true,                   // Show navigation dots
+            autoplay: true,               // Enable auto-play
+            autoplaySpeed: 4000,          // Auto-play speed (4 seconds)
+            speed: 1000,                  // Transition speed (1 second)
+            fade: true,                   // Enable fade effect for smoother transitions
+            cssEase: 'ease-in-out',       // Use ease-in-out easing for smoother transition
+            draggable: true,              // Allow dragging for manual slide transition
+            swipeToSlide: true,           // Allow swiping to move to next slide
+            touchThreshold: 10,           // Make swipe more responsive
+        });
+    }
+
     // Function to display videos based on selected muscle group
     async function displayVideos(muscleGroup) {
         videoContainer.innerHTML = ""; // Clear existing videos
@@ -37,6 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
             videos[muscleGroup].forEach(video => {
                 videoContainer.innerHTML += createVideoHTML(video);
             });
+
+            // Force reflow by reading the offsetHeight, ensuring a full re-render
+            videoContainer.offsetHeight;
+
+            // Reinitialize the Slick carousel after content is updated
+            initializeSlick();
         } else {
             videoContainer.innerHTML = "<p>No videos available for the selected muscle group.</p>";
         }
@@ -54,6 +89,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const randomIndex = Math.floor(Math.random() * allVideos.length);
             const randomVideo = allVideos[randomIndex];
             videoContainer.innerHTML = createVideoHTML(randomVideo);
+
+            // Force reflow by reading the offsetHeight, ensuring a full re-render
+            videoContainer.offsetHeight;
+
+            // Reinitialize the Slick carousel after the content is updated
+            initializeSlick();
         } else {
             videoContainer.innerHTML = "<p>No videos available at the moment.</p>";
         }
