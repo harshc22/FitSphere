@@ -1,4 +1,4 @@
-// dietPlan.js
+let chartInstance; // Declare a variable to hold the chart instance
 
 function recommendDiet() {
     const bmr = document.getElementById("bmrInput").value;
@@ -50,4 +50,47 @@ function recommendDiet() {
             </tbody>
         </table>
     `;
+
+    // Destroy the previous chart instance if it exists
+    if (chartInstance) {
+        chartInstance.destroy();
+    }
+
+    // Create the chart
+    const ctx = document.getElementById('macronutrientChart').getContext('2d');
+    chartInstance = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Protein', 'Carbohydrates', 'Fats'],
+            datasets: [{
+                label: 'Macronutrients Distribution',
+                data: [protein, carbs, fats],
+                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+                borderColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Macronutrient Distribution (grams)',
+                    font: {
+                        size: 16
+                    }
+                },
+                legend: {
+                    position: 'top',
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.label}: ${context.raw.toFixed(2)} g`;
+                        }
+                    }
+                }
+            }
+        }
+    });
 }
