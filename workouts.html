@@ -10,12 +10,18 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="CSS/style.css">
-    <!-- Include jQuery (required for Slick) -->
+    
+    <!-- Include jQuery (required for Slick and Select2) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Include Slick Carousel JS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    
+
+    <!-- Include Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Include Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 </head>
 
 <body>
@@ -35,12 +41,12 @@
             <h2>Workout Videos</h2>
             <p>Find the perfect workout videos to match your fitness goals and level. From beginner exercises to advanced training techniques, these videos will help you maintain proper form and technique.</p>
             
-        <!-- Button to get a random video -->
+            <!-- Button to get a random video -->
             <button id="random-video-button">Get a Random Video</button>
 
             <label for="muscle-group">Select Muscle Group:</label>
             <select id="muscle-group">
-                <option value="">--Choose a Muscle Group--</option>
+                <option value="">Choose a Muscle Group</option>
                 <option value="chest">Chest</option>
                 <option value="back">Back</option>
                 <option value="shoulders">Shoulders</option>
@@ -64,5 +70,15 @@
 
     <!-- Link to external JavaScript file -->
     <script src="JS/workouts.js"></script>
+
+    <!-- Initialize Select2 -->
+    <script>
+        $(document).ready(function() {
+            $('#muscle-group').select2({
+                minimumResultsForSearch: Infinity
+            });  // Initialize Select2 on the dropdown
+            
+        });
+    </script>
 </body>
 </html>

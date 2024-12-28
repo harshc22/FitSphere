@@ -100,8 +100,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Event listener for muscle group selection
-    muscleGroupSelect.addEventListener("change", (event) => {
+    // Initialize Select2 on the muscle group select element
+    $(muscleGroupSelect).select2();
+
+    // Event listener for muscle group selection using Select2
+    $(muscleGroupSelect).on("change", (event) => {
         const selectedMuscleGroup = event.target.value;
         displayVideos(selectedMuscleGroup);
     });

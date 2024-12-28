@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMR Calculator | Fit Sphere</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <script src="JS/bmrCalculator.js" defer></script>
+    
+    <!-- Include Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script> <!-- Select2 JS -->
+
     <script src="JS/nightMode.js"></script>
+    <script src="JS/bmrCalculator.js" defer></script>
 </head>
 <body>
     <header>
@@ -25,7 +32,7 @@
             <h2>BMR Calculator</h2>
             <p>Use this calculator to determine your Basal Metabolic Rate (BMR) and daily calorie needs based on your activity level.</p>
             
-            <form id="bmrCalculator" onsubmit="event.preventDefault(); calculateBMR();">
+            <form id="bmrCalculator">
                 <label for="gender">Gender:</label><br>
                 <input type="radio" id="male" name="gender" value="male" required>
                 <label for="male">Male</label>
@@ -49,8 +56,6 @@
                     <option value="active">Very active (hard exercise/sports 6-7 days a week)</option>
                     <option value="extra_active">Super active (very hard exercise/physical job)</option>
                 </select><br><br>
-
-                <input type="submit" value="Calculate BMR">
             </form>
 
             <div id="result" style="margin-top: 20px;">
@@ -62,7 +67,6 @@
                 <img src="Images/bmr.jpg" alt="A woman in athletic attire measures her waist with a tape measure, highlighting her commitment to personal fitness and well-being" width="500">
             </div>
         </section>
-        
     </main>
 
     <footer>

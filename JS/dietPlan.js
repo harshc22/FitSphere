@@ -1,6 +1,7 @@
 let chartInstance; // Declare a variable to hold the chart instance
 
 function recommendDiet() {
+    
     const bmr = document.getElementById("bmrInput").value;
     const goal = document.getElementById("goal").value;
     let calories = 0;
