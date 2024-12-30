@@ -498,3 +498,41 @@ button.toggle-mode i:before{
     height: 70px !important;
     width: 70px !important;
 }
+
+.recipe-card {
+    margin-bottom: 30px; 
+    padding: 20px;
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    background-color: var(--secondary-background-color); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.recipe-title {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: var(--primary-color); 
+    border-bottom: 2px solid var(--primary-color); 
+    padding-bottom: 10px;
+}
+
+.ingredients ul {
+    padding-left: pre-line;
+}
+
+.ingredients li {
+    margin-bottom: 8px;
+}
+
+.instructions p {
+    white-space: pre-line; 
+    margin-top: 10px;
+}
+
+.recipe-card:last-child {
+    margin-bottom: 0;
+}
+
+.recipe-card:not(:last-child) {
+    border-bottom: 2px solid #e0e0e0; 
+}

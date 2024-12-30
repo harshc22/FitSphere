@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search | Fit Sphere</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JS/nightMode.js"></script>
+    <script src="JS/recipeSearch.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Fit Sphere</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="bmr.html">BMR Calculator</a> |
+        <a href="workouts.html">Workouts</a> |
+        <a href="diet.html">Diet Plans</a> |
+        <a href="recipes.html" class="active">Recipes</a> |
+        <a href="gymLocator.html">Gym Locator</a> 
+    </nav>
+
+    <main>
+        <section>
+            <h2>Recipe Search</h2>
+            <p>Search for recipes to match your fitness goals and dietary preferences.</p>
+            <label for="recipe-query">Enter Ingredient or Dish Name:</label>
+            <input type="text" id="search-input" placeholder="e.g., chicken, pasta">
+            <button id="search-button">Search</button>
+
+            <div id="recipe-container">
+                <!-- Recipe results will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Author: Harshpreet Chinjer | Last Modified: 2024</p>
+        <p><a href="contact.html">Contact Us</a></p>
+    </footer>
+</body>
+</html>

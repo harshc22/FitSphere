@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
         chest: "chest",
         back: "back",
         shoulders: "shoulders",
-        legs: "upper legs", // Example adjustment for API naming
-        biceps: "upper arms", // Example adjustment for API naming
+        legs: "upper legs", 
+        biceps: "upper arms", 
         triceps: "upper arms",
-        core: "waist" // Example adjustment for API naming
+        core: "waist" 
     };
 
     // Fetch video data from the JSON file
@@ -99,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // Function to display exercises based on the selected muscle group
     // Function to display exercises based on the selected muscle group
     async function displayExercises(muscleGroup) {
         exercisesContainer.innerHTML = "<p>Loading exercises...</p>";
