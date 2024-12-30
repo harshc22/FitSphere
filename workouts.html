@@ -56,9 +56,17 @@
                 <option value="legs">Legs</option>
             </select>
 
-            <!-- Video Container -->
+            <!-- Video Carousel Container -->
             <div id="video-container">
                 <!-- Videos will be dynamically added here based on selection -->
+            </div>
+        </section>
+
+        <!-- Exercises Section -->
+        <section>
+            <h2>Exercises</h2>
+            <div id="exercises-container">
+                <p>Select a muscle group to view exercises.</p>
             </div>
         </section>
     </main>
@@ -77,7 +85,6 @@
             $('#muscle-group').select2({
                 minimumResultsForSearch: Infinity
             });  // Initialize Select2 on the dropdown
-            
         });
     </script>
 </body>
