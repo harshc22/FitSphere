@@ -2,7 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchForm = document.getElementById("search-form");
     const searchInput = document.getElementById("search-input");
     const recipeContainer = document.getElementById("recipe-container");
-    const apiKey = "AOOA/iEWde1a7pBYRJ6bLQ==fwBmPDqw4nWLQw82"; 
+    fetch('./data/config.json')
+    .then(response => response.json())
+    .then(config => {
+        apiKey = config.recipe_apiKey;
+    })
+    .catch(error => console.error('Error loading config:', error));
 
     const searchButton = document.getElementById("search-button");
     searchButton.addEventListener("click", async () => {
@@ -16,10 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function fetchRecipes(query) {
         const apiUrl = `https://api.api-ninjas.com/v1/recipe?query=${encodeURIComponent(query)}`;
-        
         try {
             recipeContainer.innerHTML = "<p>Loading recipes...</p>";
             const response = await fetch(apiUrl, {
+                
                 headers: { "X-Api-Key": apiKey }
             });
 

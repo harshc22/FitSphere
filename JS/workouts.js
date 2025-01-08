@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const exercisesContainer = document.getElementById("exercises-container");
     const EXERCISE_DB_API_URL = "https://exercisedb.p.rapidapi.com/exercises/bodyPart/";
     const EXERCISE_DB_API_HEADERS = {
-        "X-RapidAPI-Key": "e48dba8bb8msh4dd3cef1e65c8abp113dd6jsn3766b212f2e1", // Replace with your API Key
+        "X-RapidAPI-Key": "e48dba8bb8msh4dd3cef1e65c8abp113dd6jsn3766b212f2e1", 
         "X-RapidAPI-Host": "exercisedb.p.rapidapi.com"
     };
 
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Fetch video data from the JSON file
     async function loadVideoData() {
         try {
-            const response = await fetch("./data/videos.json"); // Adjust path as needed
+            const response = await fetch("./data/videos.json"); 
             return await response.json();
         } catch (error) {
             console.error("Failed to load video data:", error);

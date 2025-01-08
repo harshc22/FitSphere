@@ -1,4 +1,4 @@
-let chartInstance; // Declare a variable to hold the chart instance
+let chartInstance; 
 
 function recommendDiet() {
     
